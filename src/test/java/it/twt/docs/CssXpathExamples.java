@@ -2,7 +2,7 @@ package it.twt.docs;
 
 import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selectors.*;
-import static com.codeborne.selenide.Selenide.$
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class CssXpathExamples {
@@ -10,14 +10,14 @@ public class CssXpathExamples {
 
         //<input type-"email" class-"inputtext login_form_input_box" name-"email" id-"email" data-testid-"email">
         $("[data-testid=royal email]");
-        $(by("data-testid", "email");
+        $(by("data-testid", "email"));
 
         //<input type-"email" class-"inputtext login_form_input_box" name-"email" id-"email">
         $(byId("email"));
         $(By.id("email"));
         $("[id='email']");
-        $(by("id", "email");
-        $x("//*[@id='email']")
+        $(by("id", "email"));
+        $x("//*[@id='email']");
         $("input[id=email]");
 
         //<input type-"email" class-"inputtext login_form_input_box" name-"email">
