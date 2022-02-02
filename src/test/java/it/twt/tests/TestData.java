@@ -8,6 +8,7 @@ public class TestData {
             number = "333333333",
             month = "June",
             year = "1994",
+            day = "19",
             subject = "My subject",
             hobbies1 = "Sports",
             hobbies2 = "Music",
