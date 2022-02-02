@@ -14,8 +14,8 @@ public class RegistrationPage {
             firstNameInput = $("#firstName").setValue(firstName),
             lastNameInput = $("#lastName").setValue(lastName),
             emailInput = $("#userEmail").setValue(email),
-            /*genderSelect = ($("#genterWrapper").$(byText(gender)).click()),*/
             numberInput = $("#userNumber").setValue(number);
+
     public CalendarComponent calendar = new CalendarComponent();
     private String FORM_TITLE = "Student Registration Form";
 
@@ -36,10 +36,6 @@ public class RegistrationPage {
     public void typeEmail(String value) {
         emailInput.setValue(email);
     }
-
-    /*public void selectGender(String value) {
-        genderSelect.click();
-        }*/
 
     public void typeNumber(String value) {
         numberInput.setValue(number);

@@ -1,6 +1,5 @@
 package it.twt.tests;
 
-import it.twt.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selectors.byText;
@@ -9,21 +8,20 @@ import static com.codeborne.selenide.Selenide.open;
 import static it.twt.tests.TestData.*;
 
 
-public class RegistrationFormWithPageObjectTests extends TestBase{
-
-RegistrationPage registrationPage = new RegistrationPage();
-
+public class RegistrationFormWithRandomUtilsTests extends TestBase {
 
     @Test
     void fillFormTests() {
-        open("https://demoqa.com");
-        registrationPage.openPage();
-        registrationPage.typeFirstName(firstName);
-        registrationPage.typeLastName(lastName);
-        registrationPage.typeEmail(email);
+        open("/automation-practice-form");
+        $("#firstName").setValue(firstName);
+        $("#lastName").setValue(lastName);
+        $("#userEmail").setValue(email);
         $("#genterWrapper").$(byText(gender)).click();
-        registrationPage.typeNumber(number);
-        registrationPage.calendar.setDate(day, month, year);
+        $("#userNumber").setValue(number);
+        $("#dateOfBirthInput").click();
+        $(".react-datepicker__month-select").selectOption(month);
+        $(".react-datepicker__year-select").selectOption(year);
+        $("#react-datepicker__day react-datepicker__day--019 react-datepicker__day--weekend").click();
         $("#subjectsContainer").setValue(subject);
         $("#col-md-9 col-sm-12").$(byText(hobbies1)).click();
         $("#col-md-9 col-sm-12").$(byText(hobbies2)).click();

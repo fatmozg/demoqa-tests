@@ -1,7 +1,8 @@
 package it.twt.tests;
 
 public class TestData {
-    public static String firstName = "Alex",
+    public static String
+            firstName = "Alex",
             lastName = "Egorov",
             email = "alexegorov@twt.it",
             gender = "Male",
