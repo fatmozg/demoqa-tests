@@ -23,9 +23,9 @@ public class RegistrationFormTests extends TestBase {
         $("#react-datepicker__year-select").selectOption(year);
         $("#react-datepicker__day react-datepicker__day--019 react-datepicker__day--weekend").click();
         $("#subjectsContainer").setValue(subject);
-        $("#col-md-9 col-sm-12").$(byText(hobbies1)).click();
-        $("#col-md-9 col-sm-12").$(byText(hobbies2)).click();
-        $("#uploadPicture").uploadFromClasspath(fileName);
+        $("#col-md-9 col-sm-12").$(byText(hobbies)).click();
+        $("#col-md-9 col-sm-12").$(byText(hobbies)).click();
+
         $("#currentAddress").setValue(currentAddress);
         $("#state").click();
         $("#stateCity-wrapper").$(byText(state)).click();

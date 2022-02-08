@@ -3,12 +3,12 @@ package it.twt.tests;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static it.twt.tests.TestData.*;
 
 
-public class RegistrationFormWithRandomUtilsTests extends TestBase {
+public class RegistrationFormWithFakerTests extends TestBase {
+
 
     @Test
     void fillFormTests() {
@@ -16,17 +16,18 @@ public class RegistrationFormWithRandomUtilsTests extends TestBase {
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
         $("#userEmail").setValue(email);
+        $("#currentAddress").setValue(currentAddress);
+        sleep(10000);
         $("#genterWrapper").$(byText(gender)).click();
         $("#userNumber").setValue(number);
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(month);
         $(".react-datepicker__year-select").selectOption(year);
-        $("#react-datepicker__day react-datepicker__day--019 react-datepicker__day--weekend").click();
-        $("#subjectsContainer").setValue(subject);
-        $("#col-md-9 col-sm-12").$(byText(hobbies)).click();
-        $("#col-md-9 col-sm-12").$(byText(hobbies)).click();
-        $("#uploadPicture").uploadFromClasspath(fileName);
-        $("#currentAddress").setValue(currentAddress);
+        $(".react-datepicker__month-container").$(byText(day)).click();
+        $("#subjectsInput").setValue(subject);
+        $("#hobbiesWrapper").$(byText(hobbies)).click();
+        $("#hobbiesWrapper").$(byText(hobbies)).click();
+        //$("#uploadPicture").uploadFromClasspath(fileName);
         $("#state").click();
         $("#stateCity-wrapper").$(byText(state)).click();
         $("#city").click();
